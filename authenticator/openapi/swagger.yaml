@@ -41,6 +41,14 @@ paths:
         "200":
           description: is alive
   /login:
+    options:
+      summary: CORS Preflight
+      description: Handles preflight requests
+      operationId: authenticator.controllers.preflight.options_handler
+      parameters: [ ]
+      responses:
+        "204":
+          description: Preflight successful
     post:
       tags:
         - "login"
